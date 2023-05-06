@@ -39,7 +39,9 @@
     grid-template-columns: repeat(3, 1fr);
     height: auto;
     overflow: hidden;
+    max-width: 63rem;
     width: 100%;
+
 }
 .gifImg {        
     width: 30rem;
