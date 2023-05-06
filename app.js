@@ -2,7 +2,7 @@
 const main = document.querySelector(".main");
 const input = document.querySelector("#giphy_name");
 const api_key = `AIFx8rb2a9vH35WGBl1LuszIu1Tqo9ew`;
-
+const search_button = document.querySelector("#search_button");
 const createGiph = () => {
     const input = document.querySelector("#giphy_name").value;
     
@@ -17,6 +17,7 @@ const createGiph = () => {
             gifItems.forEach((element) => {
                 
                 const gifImage = document.createElement("img");
+                
                 gifImage.classList.add("gifImg");
                 gifImage.setAttribute("src",element.images.fixed_width.url);
                 
@@ -31,6 +32,11 @@ const createGiph = () => {
 }
 
 input.addEventListener("change", () => {
-    createGiph()
+    createGiph();
 });
-createGiph()
+
+search_button.addEventListener("click", () => {
+    createGiph();
+})
+
+createGiph();
